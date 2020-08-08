@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Games</title>
+
+</head>
+<body>
+{% block body_block %}
+   <section id="head" style="background-color: red;height: 150px" >
+   <div class="col-sm-4">
+            <nav aria-label="breadcrumb"><br><br><br><br>
+  <ol class="breadcrumb" style="width:112px;height: 50px;margin-left: 5px;background-color:crimson ">
+    <li class="breadcrumb-item active" aria-current="page"><i class="fas fa-bolt"></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="far fa-plus-square"></i></li>
+  </ol>
+</nav>
+
+   </div>
+    <div class="col-sm-4">
+                        <div class="container"><br><br><br>
+    <div class="picture-container">
+        <div class="picture">
+            <img src="https://lh3.googleusercontent.com/LfmMVU71g-HKXTCP_QWlDOemmWg4Dn1rJjxeEsZKMNaQprgunDTtEuzmcwUBgupKQVTuP0vczT9bH32ywaF7h68mF-osUSBAeM6MxyhvJhG6HKZMTYjgEv3WkWCfLB7czfODidNQPdja99HMb4qhCY1uFS8X0OQOVGeuhdHy8ln7eyr-6MnkCcy64wl6S_S6ep9j7aJIIopZ9wxk7Iqm-gFjmBtg6KJVkBD0IA6BnS-XlIVpbqL5LYi62elCrbDgiaD6Oe8uluucbYeL1i9kgr4c1b_NBSNe6zFwj7vrju4Zdbax-GPHmiuirf2h86eKdRl7A5h8PXGrCDNIYMID-J7_KuHKqaM-I7W5yI00QDpG9x5q5xOQMgCy1bbu3St1paqt9KHrvNS_SCx-QJgBTOIWW6T0DHVlvV_9YF5UZpN7aV5a79xvN1Gdrc7spvSs82v6gta8AJHCgzNSWQw5QUR8EN_-cTPF6S-vifLa2KtRdRAV7q-CQvhMrbBCaEYY73bQcPZFd9XE7HIbHXwXYA=s200-no" class="picture-src" id="wizardPicturePreview" title="">
+            <input type="file" id="wizard-picture" class="">
+        </div>
+
+
+    </div>
+</div>
+
+   </div>
+    <div class="col-sm-4">
+                     <nav aria-label="breadcrumb"><br><br><br><br>
+  <ol class="breadcrumb" style="width:112px;height: 50px;margin-right:5px;background-color:crimson ">
+    <li class="breadcrumb-item active" aria-current="page"><i class="fas fa-rupee-sign"></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="far fa-plus-square"></i></li>
+  </ol>
+</nav>
+
+
+
+   </div>
+
+   </section>
+
+
+
+
+    <br><br>
+
+   <section >
+        {% for i in allresult %}
+            <div class="col-sm-4" >
+          <div class="card" style="width:80px;">
+              <img class="card-img-top" src="/media/{{ i.gameimg }}" alt="Card image" style="width:78px;height:100px;">
+
+          </div>
+<h5 class="card-title"  ><b>{{ i.title }}</b></h5>
+<p class="card-title"  >{{ i.desc }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section id="footer">
+    <div class="col-sm-2">
+        <i class="fas fa-gamepad hv"></i>
+        <p style="display: flex">All Games</p>
+
+
+    </div>
+    <div class="col-sm-2">
+        <i class="fab fa-foursquare"></i>
+        <p style="display: flex">Fantasy</p>
+
+    </div>
+    <div class="col-sm-2">
+        <i class="fas fa-history hi"></i>
+        <p style="display: flex">Game History</p>
+
+    </div>
+    <div class="col-sm-2">
+        <i class="fas fa-chess-queen li"></i>
+        <p style="display: flex">Leader Board</p>
+
+    </div>
+    <div class="col-sm-2">
+        <i class="fas fa-wallet wa"></i>
+        <p style="display: flex">Wallet</p>
+
+    </div>
+
+    </section>
+{% endblock %}
+</body>
+</html>
+
+

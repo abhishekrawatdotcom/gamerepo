@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, ">
+    <title>Title</title>
+</head>
+<body>
+<table border="2">
+    <thead>
+
+    <th>GAME</th>
+    <th>USER</th>
+    </thead>
+    {% for i in prod %}
+    <tr>
+
+        <th>{{ i.Games }}</th>
+        <th>{{ i.Username }}</th>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-8 ">
+  <form method="get" action="/search" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+
+  </form>
+        </div>
+        <div class="col-md-3 text-center">
+    <form class="md-form">
+  <div class="file-field">
+    <div class="btn btn-outline-success btn-rounded waves-effect btn-sm float-left">
+
+      <input type="file">
+    </div>
+    <div class="file-path-wrapper">
+
+    </div>
+  </div>
+</form>
+
+        </div>
+    </div>

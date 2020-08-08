@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMAGE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, ">
+    <style>
+
+    </style>
+</head>
+<body>
+{% block body_block %}
+
+{% for i in prodd %}
+<div class="container">
+    <div  class="col-sm-offset-4 col-lg-12">
+        <img src="/media/{{ i.image }}">
+
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+</body>
+</html>
+
+
+
+
+
+
+
+<section class="upper-header">
+    <div class="row">
+        <div class="col-md-8 text-center">
+            <form method="get" action="/search" class="form-inline my-2 my-lg-0" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+
+  </form>
+        </div>
+        <div class="col-md-4 text-right rw">
+              <form class="md-form" >
+  <div class="file-field">
+    <div class="btn btn-outline-success btn-rounded waves-effect btn-sm float-left">
+      <input type="file">
+    </div>
+    <div class="file-path-wrapper">
+
+    </div>
+  </div>
+</form>
+        </div>
+    </div>
+</section>
+
+
+
+    <div class="row">
+        <div class="col-md-11">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <li class="nav-item">
+        <a class="nav-link " href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card " style="height: 100px">
+  <img class="card-img" src="{{ prodd }}" >
+  <div class="card-img-overlay">
+
+  </div>
+</div>
+
+        </div>
+
+    </div>
+    {% for i in Files %}
+    <div class="col-md-3"><br>
+         <div class="card" style="width: 202px; " >
+             <a href="/img/{{ i.id }}"><img class="card-img-top" src="/media/{{ i.image }}" alt="Card image" style="width:200px;height: 160px;"></a>
+
+
+         </div>
+
+    </div>
+    {% endfor %}
+
+
+
+
+      <ul style="list-style-type:none;margin: 0;  overflow: hidden;background-color: #f1f1f1; height: 30px">
+  <li style="float: left;"><a class="active" href="#home" style="display: block;">Home</a></li>
+  <li style="float: left;"><a href="#news" style="display: block;">News</a></li>
+  <li style="float: left;"><a href="#contact" style="display: block;">Contact</a></li>
+  <li style="float: left;"><a href="#about" style="display: block;">About</a></li>
+</ul>
